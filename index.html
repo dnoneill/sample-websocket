@@ -2,15 +2,11 @@
         <script src="/socket.io/socket.io.js"></script>
         <script src="http://127.0.0.1:4000/iiif-annotation/dist/iiif-annotation.js"></script>
 <link rel="stylesheet" type="text/css" href="http://localhost:4000/iiif-annotation/dist/iiif-annotation.css">
-        <script>
-            var socket = io();
-
-        </script>
     </head>
     <body>        
     
         
-		<iiif-storyboard annotationlist="https://dnoneill.github.io/annotate/annotations/0001-list.json" styling="serverside: true;"></iiif-storyboard>
+		<iiif-storyboard ws="ws://localhost:9030" annotationlist="https://dnoneill.github.io/annotate/annotations/0001-list.json" styling="controller: true"></iiif-storyboard>
     
     
 

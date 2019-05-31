@@ -20,15 +20,12 @@ function sendTime() {
 // Send current time every 10 secs
 setInterval(sendTime, 10000);
 
-// Emit welcome message on connection
 io.on('connection', function(socket) {
-	console.log('connection')
-    // Use socket to communicate with this particular client only, sending it it's own id
+    console.log(`${socket.id} connected`)
     socket.emit('message', { message: 'Welcome!', id: socket.id });
-
-    socket.on('message', (message) => {
-  		socket.broadcast.emit('message', message);
-	});
+    socket.on('broadcast', (message) => {
+        socket.broadcast.emit('message', message);
+    });
 });
 
 app.listen(9030)
