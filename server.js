@@ -28,4 +28,4 @@ io.on('connection', function(socket) {
     });
 });
 
-app.listen(9030)
+app.listen(process.env.PORT || 9030)
