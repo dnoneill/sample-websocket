@@ -1,12 +1,14 @@
 <html><head>
         <script src="/socket.io/socket.io.js"></script>
-        <script src="https://dnoneill.github.io/test-websockets/iiif-annotation.js"></script>
-<link rel="stylesheet" type="text/css" href="https://dnoneill.github.io/test-websockets/iiif-annotation.css">
+<script src="https://ncsu-libraries.github.io/iiif-annotation/dist/iiif-annotation.js"></script>
+<link rel="stylesheet" type="text/css" href="https://ncsu-libraries.github.io/iiif-annotation/dist/iiif-annotation.css">
     </head>
     <body>        
     
-        
-		<iiif-storyboard ws="wss://intense-hamlet-45148.herokuapp.com" annotationlist="https://dnoneill.github.io/annotate/annotations/0001-list.json" styling="controller: true"></iiif-storyboard>
+       <div id="anno1" title="About">
+This is an example of <a href="https://ncsu-libraries.github.io/iiif-annotation/"> a iiif-annotation library</a> equiped with websockets to allow for presentation. This is an example using a websocket to allow for transmitting. This is the controller. The reciever is located here: <a href="https://dnoneill.github.io/test-websockets/">https://dnoneill.github.io/test-websockets/</a>. This functionality is fully customizable, please visit the JavaScript library website for more information.
+</div> 
+		<iiif-storyboard ws="wss://intense-hamlet-45148.herokuapp.com" annotationlist="https://dnoneill.github.io/annotate/annotations/0001-list.json" styling="controller: true;additionalinfo: anno1; startenddisplay: info;"></iiif-storyboard>
     
     
 
